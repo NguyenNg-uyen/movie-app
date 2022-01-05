@@ -3,11 +3,10 @@ import { globalStyle } from "../../scss/globalStyle";
 export const useStyles = makeStyles({
   header_container: {
     width: "100%",
-    marginTop: "20px",
+    padding: "20px 0",
     position: "fixed",
     top: "0",
     left: "0",
-    width: "100%",
     zIndex: "99",
     transition: "height 0.3s ease, background-color 0.3s ease",
   },

@@ -5,7 +5,6 @@ export const useStyles = makeStyles({
     padding: "9rem 0",
     width: "100%",
     height: "100vh",
-    backgroundSize: "100%",
     position: "relative",
     backgroundPosition: "center",
     backgroundSize: "cover",
@@ -23,7 +22,7 @@ export const useStyles = makeStyles({
   movie_content: {
     position: "relative",
     left: "5%",
-    top: "30%",
+    top: "25%",
     zIndex: "5",
     textAlign: "left",
     width: "50%",
@@ -37,26 +36,17 @@ export const useStyles = makeStyles({
     "& h2": {
       fontWeight: "700",
     },
+  },
+  movie_describe: {
     "& svg": {
       color: globalStyle.yellow,
     },
   },
-  pg18: {
-    backgroundColor: "white",
-    color: "black",
-    fontWeight: "700",
-    textAlign: "center",
-    padding: "8px  11px 6px 11px",
-    lineHeight: "1",
-    fontSize: "11px",
-  },
-  hd: {
-    border: "2px solid white",
-    backgroundColor: "black",
-    color: "white",
-    fontWeight: "700",
-    padding: "8px  11px 6px 11px",
-    lineHeight: "1",
-    fontSize: "11px",
+  trailerModal: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "50%",
   },
 });

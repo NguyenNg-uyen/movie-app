@@ -11,7 +11,7 @@ export const MyButton = styled(Button)({
   border: "1.5px solid ",
   borderRadius: globalStyle.borderRadius,
   color: "white",
-  backgroundColor: "rgb(18, 21, 30)",
+  backgroundColor: "#20212b",
   textAlign: "center",
   lineHeight: 1.5,
   borderColor: globalStyle.yellow,

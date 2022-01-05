@@ -1,8 +1,10 @@
 import { Box, Toolbar, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { MyButton } from "../Button";
 import { useStyles } from "./HeaderStyles";
+import { globalStyle } from "../../scss/globalStyle";
 export default function Header() {
   const headerNav = [
     {
@@ -32,8 +34,15 @@ export default function Header() {
   ];
   const classes = useStyles();
   const pathName = useLocation();
+  const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    window.onscroll = () => {
+      setOffset(window.pageYOffset);
+    };
+  }, []);
+  console.log(offset);
   return (
-    <Box className={classes.header_container}>
+    <Box className={classes.header_container} sx={offset > 0 ? { backgroundColor: globalStyle.background } : ""}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <img src={logo} alt="logo" />
         <Box className={classes.menus}>
